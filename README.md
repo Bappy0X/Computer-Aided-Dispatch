@@ -21,7 +21,7 @@ I plan to use this as an "A-Level Computer Science Practical Programming Project
 
 ## Documentation
 
-- 1️⃣ [Analysis](docs/analysis.md)
+- :one: [Analysis](docs/analysis.md)
 
 <a name="tech">
 
