@@ -12,21 +12,25 @@ I plan to use this as an "A-Level Computer Science Practical Programming Project
 > *Image examples*
 
 ##### Contents
-[Documentation](#docs)
-[Technologies](#tech)
-[Installation](#install)
+
+- [Documentation](#docs)
+- [Technologies](#tech)
+- [Installation](#install)
 
 <a name="docs">
+
 ## Documentation
 
-[Analysis](docs/analysis.md)
+- 1️⃣ [Analysis](docs/analysis.md)
 
 <a name="tech">
+
 ## Technologies
 
 Coming soon...
 
 <a name="install">
+
 ## Installation
 
 Coming soon...
