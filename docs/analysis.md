@@ -1,8 +1,8 @@
-[:rewind: Back](/)
+[:rewind: Back](/README.md)
 
 # :one: Analysis
 
-## Problem Definition
+# Problem Definition
 
 The emergency services, delivery services, taxi’s and other private companies all require and rely on “Computer Aided Dispatch” software. This is used to keep track of jobs, track and periodically update records, monitor the workforce and provide better customer service.
 
@@ -12,7 +12,7 @@ CAD (Computer Aided Dispatch) software is also extremely useful for the general 
 
 ---
 
-## Before Computers
+### Before Computers
 
 Pen and paper are extremely inefficient methods of tracking and analysing any process. Requiring excessive amounts of human interaction, pen and paper are more likely to fail.
 
@@ -31,8 +31,60 @@ This allows for advanced analytics of your workforce. You're able to ensure that
         3. You have an instant access to records - there's no delay or frustration rummaging through physical papers trying to find exactly what you need.
         4. It's easier to archive and back up data, and request it when you need it. This makes reports a lot easier.
     2. **Training**
-    However, the workforce may need to be retrained in order to use this new system. Whilst some may not have appropriate experience or contact with software, so it may be more difficult to understand.
+        1. However, the workforce may need to be retrained in order to use this new system. Whilst some may not have appropriate experience or contact with software, so it may be more difficult to understand.
 
-There are many limitations to using paper and pen...
+There are many limitations to using paper and pen. Primarily the costs. Monthly fulfilment of physical goods like pen & paper can be extremely costly, especially when those goods aren't guaranteed to be used. These are also imperishable, where they can only be used for a set time before becoming unusable. Especially paper, where it can only be written and printed and written onto once.
+
+These resources are also difficult to expand. Pen and paper is fundamentally flawed, it's impossible to add more features to them. This restricts the usability of pen and paper significantly.
+
+Computer systems are able to scale horizontally and vertically, infinitely. This means that many more features can be added. Because of this, they're also more affordable and allow for more flexibility.
+
+Online and computational based systems are driven by data. This allows you to have comprehensive insights and analysis into volumes, quality, staff performance and more. This could be daily, or periodical data. This can be represented on the front end by library's such as D3, Highcharts and my favoruite, Zingchart.
+
+However, a computational solution may not be for everyone. Staring at screens causes eye fatigue and strains the eyes of all generations. Whilst older generations might find learning UI difficult. These needs can be filled by improving the friendliness of the user interface.
 
 ---
+
+# Stakeholders
+
+There are many key stakeholders for this project and fundamental idea - within many sectors and job roles. This means that expanding and increasing the flexibility of use for the application is a must, in order to supply for all these target markets and demographics
+
+- **The Public Services**
+All of the blue light services (police, fire, ambulance) utilise dispatching software to notify emergency personnel to a scene or otherwise act on an incident.
+To supply for this stakeholder group, my application must be trustworthy. This means that extreme and rigorous testing is a must - ensuring that my application can be trusted during high intensity situations that this stakeholder group commonly experiences.
+- **Private Companies**
+- **The Gig-based Market**
+
+---
+
+# Research
+
+todo
+
+---
+
+# Features
+
+todo
+
+---
+
+# Limitations
+
+todo
+
+---
+
+# Requirements
+
+todo
+
+---
+
+# Success Criteria
+
+Todo
+
+---
+
+### Joshua Vaughan

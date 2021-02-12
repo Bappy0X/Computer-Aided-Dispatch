@@ -21,7 +21,14 @@ I plan to use this as an "A-Level Computer Science Practical Programming Project
 
 ## Documentation
 
-- :one: [Analysis](docs/analysis.md)
+- [:one: Analysis](docs/analysis.md)
+ - [Problem Definition](docs/analysis.md#problem-definition)
+ - [Stakeholders](docs/analysis.md#stakeholders)
+ - [Research](docs/analysis.md#research)
+ - [Features](docs/analysis.md#features)
+ - [Limitations](docs/analysis.md#limitations)
+ - [Requirements](docs/analysis.md#requirements)
+ - [Success Criteria](docs/analysis.md#success-criteria)
 
 <a name="tech">
 
