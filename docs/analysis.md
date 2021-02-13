@@ -2,6 +2,14 @@
 
 # :one: Analysis
 
+- [Problem Definition](#problem-definition)
+- [Stakeholders](#stakeholders)
+- [Research](#research)
+- [Features](#features)
+- [Limitations](#limitations)
+- [Requirements](#requirements)
+- [Success Criteria](#success-criteria)
+
 # Problem Definition
 
 The emergency services, delivery services, taxi’s and other private companies all require and rely on “Computer Aided Dispatch” software. This is used to keep track of jobs, track and periodically update records, monitor the workforce and provide better customer service.
@@ -53,13 +61,44 @@ There are many key stakeholders for this project and fundamental idea - within m
 All of the blue light services (police, fire, ambulance) utilise dispatching software to notify emergency personnel to a scene or otherwise act on an incident.
 To supply for this stakeholder group, my application must be trustworthy. This means that extreme and rigorous testing is a must - ensuring that my application can be trusted during high intensity situations that this stakeholder group commonly experiences.
 - **Private Companies**
-- **The Gig-based Market**
+    - **Taxi-Cabs**
+    Operating across the globe, many people rely on taxi's in order to commute to and from work, parties, and events.
+    These services rely on dispatchers in order to operate efficiently and successfully. A lack of professional and efficient conduct would result in an unhappy customer.
+    To appeal to these businesses, the application must display a promising (and real-time) user experience. Each cab driver must understand what they need to do, how to do it and when to do it. Concise and effective user interface is important for this.
+    - **Delivery Services**
+    Civilisation also relies on delivery services to receive online purchases. In recent years, these markets have grew exponentially. Delivery Companies such as Amazon/Prime, Hermes and DHL have seen a massive increase in their market share. This is a great driving force to creating a delivery-friendly application.
+    For this, route tracking must be implemented alongside real-time package tracking systems in order to combat the existing market. If the app lacks these features then we may se a decrease in overall business, as these features are desirable to the end-user.
+    - **The Gig-based Market**
+    Lyft and Uber supply services that could also benefit from the use of notifications and tracking. The end-user would be able to track their ride and receive an appropriate ETA. Alike taxi-cab services, this requires a promising and easy to use UI/UX. This also ensures that clients receives happy customers and causes repeat business.
+
+    The application must deliver a great user experience in order to be promised and trusted by private companies. Implementing a free trial or a guest scheme may also be a great incentive to business.
 
 ---
 
 # Research
 
-todo
+The market for Computer Aided Dispatch is currently dominated by old and outdated software than is proven to be reliable, difficult to use and is expensive. This application must appeal to the aforementioned stakeholders, whilst also developing a unique solution to stand out from the existing market.
+
+Mapping potential competitors on a market matrix will assist in finding a gap within the existing market, and identify unique traits and opportunities for this application. Providing these unique traits and standing out from the market has massive benefits, where sales can be dramatically boosted, and revenue can also be increased. This also allows us to directly compete with existing solutions, boosting market share.
+
+![https://file.coffee/u/-nSwfBR5QD.png](https://file.coffee/u/-nSwfBR5QD.png)
+
+Market matrix displaying the mentioned competitors.
+
+- **Soma Global**
+This solution presents itself as a cloud based CAD. It features an online dashboard with integrated maps. Important information is displayed immediately, directly to the user - the end user doesn't have to search in order to find what they need. Addresses, personnel assigned, call status and more information is shown here.
+
+    This service is extremely expandable, where it can be used across multiple devices by many different users. The UI/UX appears simple, and would be easy to adjust to - whilst also maintaining a modernistic feel and look.
+
+    Prices for this solution are not publicly listed, instead you must contact the developers directly. It also appears that the application is hosted for you on remote hardware, and you'll most likely be presented with a monthly charge for this.
+
+- **OpenCAD**
+This is an Open Source solution that runs on the traditional Linux Apache MySQL PHP (LAMP) stack. This may not be a modern solution, but it includes plentiful features - yet still lacking a map. As it's open source, it's free to use, distribute and edit, and can be ran on almost any applicable hardware.
+
+- **Lebanon County Department of Emergency Services**
+Under Pennsylvania state ownership, the LC:DES is very public about the services that they offer to the public and emergency services. This information is publicly available to us, so we're able to compare and contrast a real implementation of a potential competitors app within the emergency services.
+
+    This is a very simple solution for dispatchers. A map is integrated within the application, and dispatchers are able to message (and even page/text) different operational units spread throughout the county.
 
 ---
 
