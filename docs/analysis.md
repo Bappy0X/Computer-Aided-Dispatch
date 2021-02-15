@@ -81,16 +81,11 @@ The market for Computer Aided Dispatch is currently dominated by old and outdate
 
 Mapping potential competitors on a market matrix will assist in finding a gap within the existing market, and identify unique traits and opportunities for this application. Providing these unique traits and standing out from the market has massive benefits, where sales can be dramatically boosted, and revenue can also be increased. This also allows us to directly compete with existing solutions, boosting market share.
 
-![https://file.coffee/u/-nSwfBR5QD.png](https://file.coffee/u/-nSwfBR5QD.png)
+<p align="center">
+    <img src="https://file.coffee/u/-nSwfBR5QD.png" height="200px"/>
+</p>
 
 Market matrix displaying the mentioned competitors.
-
-- **Soma Global**
-This solution presents itself as a cloud based CAD. It features an online dashboard with integrated maps. Important information is displayed immediately, directly to the user - the end user doesn't have to search in order to find what they need. Addresses, personnel assigned, call status and more information is shown here.
-
-    This service is extremely expandable, where it can be used across multiple devices by many different users. The UI/UX appears simple, and would be easy to adjust to - whilst also maintaining a modernistic feel and look.
-
-    Prices for this solution are not publicly listed, instead you must contact the developers directly. It also appears that the application is hosted for you on remote hardware, and you'll most likely be presented with a monthly charge for this.
 
 - **OpenCAD**
 This is an Open Source solution that runs on the traditional Linux Apache MySQL PHP (LAMP) stack. This may not be a modern solution, but it includes plentiful features - yet still lacking a map. As it's open source, it's free to use, distribute and edit, and can be ran on almost any applicable hardware.
@@ -100,11 +95,28 @@ Under Pennsylvania state ownership, the LC:DES is very public about the services
 
     This is a very simple solution for dispatchers. A map is integrated within the application, and dispatchers are able to message (and even page/text) different operational units spread throughout the county.
 
+- **Soma Global**
+This solution presents itself as a cloud based CAD. It features an online dashboard with integrated maps. Important information is displayed immediately, directly to the user - the end user doesn't have to search in order to find what they need. Addresses, personnel assigned, call status and more information is shown here.
+
+    This service is extremely expandable, where it can be used across multiple devices by many different users. The UI/UX appears simple, and would be easy to adjust to - whilst also maintaining a modernistic feel and look.
+
+    Prices for this solution are not publicly listed, instead you must contact the developers directly. It also appears that the application is hosted for you on remote hardware, and you'll most likely be presented with a monthly charge for this.
+
+- **Dever Software: Dispatch**
+Aimed towards private hires like Airport Transfers, Chauffeur Services and more. Clients are able to manage their staff. And end-users will be presented with a user interface that allows them to place orders and create bookings. This gives the client an out-the-box experience that requires no extra setup. This gives the client confidence and allows them to present themselves with professionality.
+
+- **ServiceM8**
+This service also presents itself towards private companies and organisations, where job management and organisation is one of its main components
+
+    This graph illustrates an upcurve. More expensive products utilise more, or more advanced features. There's a wide gap in this market, where move features are less expensive. This is obvious, however, as more features presents an obstacle to companies, organisations or individual, where more work is required to implement it. This may also be time, and in fast paced businesses, time is money.
+
+    Using modern technologies and tech stacks may be extremely useful in order to combat this market, as they can be utilised to add more features, quicker and more efficiently, whilst not taking a knock to performance or loss of features, or loss of quality.
+
 ---
 
 # Features
 
-todo
+The most important attributes of promotion is presenting a product with plentiful features and high quality. This is impossible without an app that isn't feature rich, this means that creating a featureful application is a top priority for this project. This will help to further improve the potential outreach for the application/product.
 
 ---
 
