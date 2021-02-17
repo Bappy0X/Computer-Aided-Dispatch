@@ -65,7 +65,7 @@ There are many key stakeholders for this project and fundamental idea - within m
     
 - **Private Companies**
     - **Taxi-Cabs**
-    
+		
 		Operating across the globe, many people rely on taxi's in order to commute to and from work, parties, and events.
     	
 		These services rely on dispatchers in order to operate efficiently and successfully. A lack of professional and efficient conduct would result in an unhappy customer.
@@ -73,13 +73,13 @@ There are many key stakeholders for this project and fundamental idea - within m
 		To appeal to these businesses, the application must display a promising (and real-time) user experience. Each cab driver must understand what they need to do, how to do it and when to do it. Concise and effective user interface is important for this.
 
     - **Delivery Services**
-    
+		
 		Civilisation also relies on delivery services to receive online purchases. In recent years, these markets have grew exponentially. Delivery Companies such as Amazon/Prime, Hermes and DHL have seen a massive increase in their market share. This is a great driving force to creating a delivery-friendly application.
     	
 		For this, route tracking must be implemented alongside real-time package tracking systems in order to combat the existing market. If the app lacks these features then we may se a decrease in overall business, as these features are desirable to the end-user.
 
     - **The Gig-based Market**
-    
+		
 		Lyft and Uber supply services that could also benefit from the use of notifications and tracking. The end-user would be able to track their ride and receive an appropriate ETA. Alike taxi-cab services, this requires a promising and easy to use UI/UX. This also ensures that clients receives happy customers and causes repeat business.
     	
 		The application must deliver a great user experience in order to be promised and trusted by private companies. Implementing a free trial or a guest scheme may also be a great incentive to business.
@@ -96,32 +96,32 @@ Mapping potential competitors on a market matrix will assist in finding a gap wi
 <p align="center">Market matrix displaying the mentioned competitors.</p>
 
 - **OpenCAD**
-
-    This is an Open Source solution that runs on the traditional Linux Apache MySQL PHP (LAMP) stack. This may not be a modern solution, but it includes plentiful features - yet still lacking a map. As it's open source, it's free to use, distribute and edit, and can be ran on almost any applicable hardware.
+    
+	This is an Open Source solution that runs on the traditional Linux Apache MySQL PHP (LAMP) stack. This may not be a modern solution, but it includes plentiful features - yet still lacking a map. As it's open source, it's free to use, distribute and edit, and can be ran on almost any applicable hardware.
 
 - **Lebanon County Department of Emergency Services**
-
-    Under Pennsylvania state ownership, the LC:DES is very public about the services that they offer to the public and emergency services. This information is publicly available to us, so we're able to compare and contrast a real implementation of a potential competitors app within the emergency services.
+    
+	Under Pennsylvania state ownership, the LC:DES is very public about the services that they offer to the public and emergency services. This information is publicly available to us, so we're able to compare and contrast a real implementation of a potential competitors app within the emergency services.
 
     This is a very simple solution for dispatchers. A map is integrated within the application, and dispatchers are able to message (and even page/text) different operational units spread throughout the county.
 
 - **Soma Global**
 	
 	This solution presents itself as a cloud based CAD. It features an online dashboard with integrated maps. Important information is displayed immediately, directly to the user - the end user doesn't have to search in order to find what they need. Addresses, personnel assigned, call status and more information is shown here.
-	
+
 	This service is extremely expandable, where it can be used across multiple devices by many different users. The UI/UX appears simple, and would be easy to adjust to - whilst also maintaining a modernistic feel and look.
-	
+
 	Prices for this solution are not publicly listed, instead you must contact the developers directly. It also appears that the application is hosted for you on remote hardware, and you'll most likely be presented with a monthly charge for this.
 
 - **Dever Software: Dispatch**
-
+    
     Aimed towards private hires like Airport Transfers, Chauffeur Services and more. Clients are able to manage their staff. And end-users will be presented with a user interface that allows them to place orders and create bookings. This gives the client an out-the-box experience that requires no extra setup. This gives the client confidence and allows them to present themselves with professionality.
 
 - **ServiceM8**
-
+    
     This service also presents itself towards private companies and organisations, where job management and organisation is one of its core components and functionalities. It presents the client with a schedule management system and locational/positional data.
 
-    This makes it easier for management to create tasks and schedules for employees. It's charm is to `eliminate paperwork, improve productivity & provide great service`. This is also relevant to our application, and also what we aim to create.
+    This makes it easier for management to create tasks and schedules for employees. It's charm is to 'eliminate paperwork, improve productivity & provide great service'. This is also relevant to our application, and also what we aim to create.
 
     This application is purely for task management, but can be used as a dispatching software. Pricing is very flexible, and will allow clients to scale up, or down, depending on what resources we require. This is also something I believe should be implemented with this app. A 14 day free trial is also offered.
 
@@ -152,19 +152,19 @@ The client must be pleased with the application that they're delivered, we'd lik
 There are plentiful ways to deploy and serve the application to clients.
 
 - **Source Code & Self-Hosted**
-
+    
     In this process, the source code for the application would be given as a package. In this, we potentially risk security risks, and picking a license for the application would be extremely important to the safety of the application.
 
     The client would then host the application on their own dedicated server, this may have more setup costs, including time and frustration for engineers, and may prove more difficult to maintain, as different developers may use their own techniques.
 
 - **Shared Hosting**
-
+    
     Here, the owner(s) (myself) would host the code, this prevents the need for external licensing and contains the source-code within internal staff.
 
     Shared hosting would include multiple instances of the same application running on the same server. Each instance *shares* a portion of resources available on the server.
 
 - **Dedicated Hosting**
-
+    
     Alike shared hosting, servers and code would be hosted under one owner.
 
     Dedicated Hosting entails one dedicated server per Instance, this can be more costly, however can prove cost-effective for bigger and larger scaled apps, and higher user demand.
@@ -174,28 +174,29 @@ There are plentiful ways to deploy and serve the application to clients.
 Shared hosting and dedicated hosting and the best to choose in this instance, as they're more rapidly scalable, require less maintenance from the end-user, and are on-site, so the application is more easily manageable. This centralised infrastructure will prove massively beneficial to the end user.
 
 **Privacy**
+
 Users of Big-Tech companies are often scared of their data being breached or misused. Engaging in our clients trust is extremely important to the success of the application.
 
 We must comply with GDPR regulation, as I (the current owner of the application) live in the UK, and must abide by UK law.
 
 ### Maps & Positional Data
 
-To create a USP (Unique Selling Point), the application can utilise a feature that allows tracking of positional data, pinpointed onto a map. We can use pre-existing libraries in order to minimise development times. This also means developers won't have to worry about specifics, providing a reputable and `good` solution is used.
+To create a USP (Unique Selling Point), the application can utilise a feature that allows tracking of positional data, pinpointed onto a map. We can use pre-existing libraries in order to minimise development times. This also means developers won't have to worry about specifics, providing a reputable and 'good' solution is used.
 
 - **GMaps**
 
     We're able to generate maps using Google Maps, a popular pinpointed app. Pinpoints, lines and menus can be created. This appears to be the most basic solution, and doesn't allow for much expandability.
     
 - **jHere**
-
+    
     This is used by many larger scale companies, such as Amazon. It uses a custom, home-grown map, known as 'HERE' and is interactive using jQuery. This is also a basic solution, however it appears much more modern and allows for more expandability.
 
 - **D3**
-
+    
     This is a massively powerful tool that has many different uses. We're able to generate maps and render advanced graphics. A great example of this can be seen [here](http://d3.artzub.com/wbca/).
 
 - **Leaflet**
-
+    
     ...Is a light-weight map engine. You're able to use it to draw custom maps and other diagrams. Other functionality be added on by using different addons and plugins.
 
 ### Data Visualisation
@@ -204,7 +205,7 @@ It's extremely useful to view in-depth analytics about their workforce and diffe
 
 ### Intuitive UI & UX
 
-I was once told: `User Interface is like a joke; if you must explain it, then it’s bad`. Whilst developing this application I should keep this in mind. This will help to ensure that the application will be more complete and ready for the end-user.
+I was once told: 'User Interface is like a joke; if you must explain it, then it’s bad'. Whilst developing this application I should keep this in mind. This will help to ensure that the application will be more complete and ready for the end-user.
 
 Ideally, we don't want to have to create an in-depth tutorial for the end-user. This is slow and confuse some. This would also mean that our application is not suitable, as it's not intuitive. The user should be able to learn through play, and the interface should be easy to learn - regardless of their prior experience. This will help to decrease training costs and ease the minds of clients.
 
@@ -226,15 +227,89 @@ todo
 
 ### Development Environment
 
-Visual Studio Code 
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Visual Studio Code</th>
+		</tr>
+		<tr>
+			<th>Requirement</th>
+			<th>Justification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<ul>
+					<li>1.6GHz or faster processor</li>
+					<li>1GB of RAM</li>
+					<li>SSD > 200mb</li>
+					<li>
+						<strong>Operating System:</strong><br>
+						<ul>
+							<li>OS X Yosemite</li>
+							<li>Windows 7 (with .NET Framework 4.5.2), 8.0, 8.1 or 10 (32-bit and 64-bit)</li>
+							<li>Linux (Debian): Ubuntu Desktop 14.04, Debian 7</li>
+							<li>Linux (Red Hat): Red Hat Enterprise Linux 7, CentOS 7, Fedora 23</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+			<td>In order to write and develop code for this application, Visual Studio Code will be used. This will create a very usable work environment. I would recommend an SSD to allow for faster loading times.</td>
+		</tr>
+	</tbody>
+</table>
 
-| Requirement | Justification |
-|:-----------:|:-------------:|
-| Stuff...    | Stuff         |
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Python 3.8.2 Runtime Environment</th>
+		</tr>
+		<tr>
+			<th>Requirement</th>
+			<th>Justification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<ul>
+					<li>Multi-Core 2GHz or faster CPU</li>
+					<li>2 GB of RAM</li>
+				</ul>
+			</td>
+			<td>In order to serve our application on a localhost (for our developer), we should have a fast processor and plentiful RAM. This will allow for python files to be kept within RAM and pages to be templated and produced faster.</td>
+		</tr>
+	</tbody>
+</table>
 
 ### Server/Deployment Environment
 
-*create this tbl in .md*
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Python 3.8.2 Server-Side Runtime Environment</th>
+		</tr>
+		<tr>
+			<th>Requirement</th>
+			<th>Justification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<ul>
+					<li>1 CPU</li>
+					<li>25GB SSD</li>
+					<li>1 GB of RAM</li>
+					<li>1TB Transfer</li>
+					<li>Linux Ubuntu (LTS) Bionic 18.04 x64 (No desktop environment, purely CLI)</li>
+				</ul>
+			</td>
+			<td>Having a powerful server machine will allow us to serve as many end users as possible, as pages will spend less time within the processing phase – the same applies with an SSD, files can be fetched and utilised faster.<br><br>Thanks to the less taxing OS we are also able to have a smaller amount of RAM.<br><br>With a server machine, it’s important that we have a high amount of available transfer.<br><br>We can also use a scalable SaaS – e.g., DigitalOcean or Scaleway. This will allow us to scale up our application if we receive an increased amount of traffic.</td>
+		</tr>
+	</tbody>
+</table>
 
 ### End User Environment
 
