@@ -92,7 +92,7 @@ The market for Computer Aided Dispatch is currently dominated by old and outdate
 
 Mapping potential competitors on a market matrix will assist in finding a gap within the existing market, and identify unique traits and opportunities for this application. Providing these unique traits and standing out from the market has massive benefits, where sales can be dramatically boosted, and revenue can also be increased. This also allows us to directly compete with existing solutions, boosting market share.
 
-<p align="center"><img src="https://file.coffee/u/-nSwfBR5QD.png" height="400px"/></p>
+<p align="center"><img src="https://file.coffee/u/TjbUcuHZ16.png" height="400px" alt="Graph illustrating an up-curve between features and price."/></p>
 <p align="center">Market matrix displaying the mentioned competitors.</p>
 
 - **OpenCAD**
@@ -119,17 +119,100 @@ Mapping potential competitors on a market matrix will assist in finding a gap wi
 
 - **ServiceM8**
 
-    This service also presents itself towards private companies and organisations, where job management and organisation is one of its main components
+    This service also presents itself towards private companies and organisations, where job management and organisation is one of its core components and functionalities. It presents the client with a schedule management system and locational/positional data.
 
-    This graph illustrates an upcurve. More expensive products utilise more, or more advanced features. There's a wide gap in this market, where move features are less expensive. This is obvious, however, as more features presents an obstacle to companies, organisations or individual, where more work is required to implement it. This may also be time, and in fast paced businesses, time is money.
+    This makes it easier for management to create tasks and schedules for employees. It's charm is to `eliminate paperwork, improve productivity & provide great service`. This is also relevant to our application, and also what we aim to create.
 
-    Using modern technologies and tech stacks may be extremely useful in order to combat this market, as they can be utilised to add more features, quicker and more efficiently, whilst not taking a knock to performance or loss of features, or loss of quality.
+    This application is purely for task management, but can be used as a dispatching software. Pricing is very flexible, and will allow clients to scale up, or down, depending on what resources we require. This is also something I believe should be implemented with this app. A 14 day free trial is also offered.
+
+This graph illustrates an upcurve. More expensive products utilise more, or more advanced features. There's a wide gap in this market, where move features are less expensive. This is obvious, however, as more features presents an obstacle to companies, organisations or individual, where more work is required to implement it. This may also be time, and in fast paced businesses, time is money.
+
+Using modern technologies and tech stacks may be extremely useful in order to combat this market, as they can be utilised to add more features, quicker and more efficiently, whilst not taking a knock to performance or loss of features, or loss of quality.
 
 ---
 
 # Features
 
 The most important attributes of promotion is presenting a product with plentiful features and high quality. This is impossible without an app that isn't feature rich, this means that creating a featureful application is a top priority for this project. This will help to further improve the potential outreach for the application/product.
+
+### Simple Set Up
+
+The user should be instantly interested by the application. It's important that the setup process doesn't turn them away from the application - this would be catastrophic, as the application would never reach an end user, less users would notice its potential, meaning it's more difficult to generate a revenue.
+
+### Day-to-Day Running
+
+The client must be pleased with the application that they're delivered, we'd like to create an application that can promote itself easily. 
+
+### General Maintenance
+
+...Should ideally be kept to a minimum, and should be provided internally, free of cost. Clients should have the best experience possible whilst using this solution - creating brand-loyalty and continue to generate revenue.
+
+### Architecture Paradigms
+
+There are plentiful ways to deploy and serve the application to clients.
+
+- **Source Code & Self-Hosted**
+
+    In this process, the source code for the application would be given as a package. In this, we potentially risk security risks, and picking a license for the application would be extremely important to the safety of the application.
+
+    The client would then host the application on their own dedicated server, this may have more setup costs, including time and frustration for engineers, and may prove more difficult to maintain, as different developers may use their own techniques.
+
+- **Shared Hosting**
+
+    Here, the owner(s) (myself) would host the code, this prevents the need for external licensing and contains the source-code within internal staff.
+
+    Shared hosting would include multiple instances of the same application running on the same server. Each instance *shares* a portion of resources available on the server.
+
+- **Dedicated Hosting**
+
+    Alike shared hosting, servers and code would be hosted under one owner.
+
+    Dedicated Hosting entails one dedicated server per Instance, this can be more costly, however can prove cost-effective for bigger and larger scaled apps, and higher user demand.
+
+    See, when more users are active on an application, that application requires more active resources in order to function properly - as resource requirements will increase over each request. If the application doesn't have access to enough resources, the service will hang and appear slow to the end user. Using dedicated hosting will avoid this - until the application reaches a certain scale, at which load-balancing is required between multiple dedicated servers.
+
+Shared hosting and dedicated hosting and the best to choose in this instance, as they're more rapidly scalable, require less maintenance from the end-user, and are on-site, so the application is more easily manageable. This centralised infrastructure will prove massively beneficial to the end user.
+
+**Privacy**
+Users of Big-Tech companies are often scared of their data being breached or misused. Engaging in our clients trust is extremely important to the success of the application.
+
+We must comply with GDPR regulation, as I (the current owner of the application) live in the UK, and must abide by UK law.
+
+### Maps & Positional Data
+
+To create a USP (Unique Selling Point), the application can utilise a feature that allows tracking of positional data, pinpointed onto a map. We can use pre-existing libraries in order to minimise development times. This also means developers won't have to worry about specifics, providing a reputable and `good` solution is used.
+
+- **GMaps**
+
+    We're able to generate maps using Google Maps, a popular pinpointed app. Pinpoints, lines and menus can be created. This appears to be the most basic solution, and doesn't allow for much expandability.
+    
+- **jHere**
+
+    This is used by many larger scale companies, such as Amazon. It uses a custom, home-grown map, known as 'HERE' and is interactive using jQuery. This is also a basic solution, however it appears much more modern and allows for more expandability.
+
+- **D3**
+
+    This is a massively powerful tool that has many different uses. We're able to generate maps and render advanced graphics. A great example of this can be seen [here](http://d3.artzub.com/wbca/).
+
+- **Leaflet**
+
+    ...Is a light-weight map engine. You're able to use it to draw custom maps and other diagrams. Other functionality be added on by using different addons and plugins.
+
+### Data Visualisation
+
+It's extremely useful to view in-depth analytics about their workforce and different situations. Within the emergency services, response times are extremely important are critical to the element of success. Using graphs and data visualisation techniques, response times can be increased by assigning the most appropriate units to calls and situations.
+
+### Intuitive UI & UX
+
+I was once told: `User Interface is like a joke; if you must explain it, then it’s bad`. Whilst developing this application I should keep this in mind. This will help to ensure that the application will be more complete and ready for the end-user.
+
+Ideally, we don't want to have to create an in-depth tutorial for the end-user. This is slow and confuse some. This would also mean that our application is not suitable, as it's not intuitive. The user should be able to learn through play, and the interface should be easy to learn - regardless of their prior experience. This will help to decrease training costs and ease the minds of clients.
+
+This would also help to decrease our costs as we'd require less support staff, so more time can be spend innovating and running the project.
+
+### User Information & Live Status Tracking
+
+Clients will often want to keep track of assets in real-time. This is an important aspect of dispatch operations and contributes to the minimisation of costs and extensive service. This also helps to develop a brand's image, as more clients can be reaches and be served.
 
 ---
 
@@ -141,7 +224,21 @@ todo
 
 # Requirements
 
-todo
+### Development Environment
+
+Visual Studio Code 
+
+| Requirement | Justification |
+|:-----------:|:-------------:|
+| Stuff...    | Stuff         |
+
+### Server/Deployment Environment
+
+*create this tbl in .md*
+
+### End User Environment
+
+The only requirement for the end user will be to install a browser and use a device that can access the internet. One objective for this application will be to produce an accessible and responsive user interface, that allows the application to reach more potential clients.
 
 ---
 
