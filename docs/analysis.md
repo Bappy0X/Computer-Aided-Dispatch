@@ -3,11 +3,24 @@
 # :one: Analysis
 
 - [Problem Definition](#problem-definition)
+	- [Before Computers](#before-computers)
+	- [Incorporating a Computational Solution](#incorporating-a-computational-solution)
 - [Stakeholders](#stakeholders)
 - [Research](#research)
 - [Features](#features)
+	- [Simple Set Up](#simple-set-up)
+	- [Day-to-Day Running](#day-to-day-running)
+	- [General Maintenance](#general-maintenance)
+	- [Architecture Paradigms](#architecture-paradigms)
+	- [Maps & Positional Data](#maps--positional-data)
+	- [Data Visualisation](#data-visualisation)
+	- [Intuitive UI & UX](#intuitive-ui--ux)
+	- [User Information & Live Status Tracking](#user-information--live-status-tracking)
 - [Limitations](#limitations)
 - [Requirements](#requirements)
+	- [Development Environment](#development-environment)
+	- [Server/Deployment Environment](#serverdeployment-environment)
+	- [End User Environment](#end-user-environment)
 - [Success Criteria](#success-criteria)
 
 # Problem Definition
