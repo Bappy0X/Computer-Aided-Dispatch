@@ -176,6 +176,8 @@ There are plentiful ways to deploy and serve the application to clients.
 
     Shared hosting would include multiple instances of the same application running on the same server. Each instance *shares* a portion of resources available on the server.
 
+	To do this, a single VPS instance can be bought (this can be as little as $5 from DigitalOcean) and NGINX can be used in order to proxy and direct traffic from different domains.
+
 - **Dedicated Hosting**
     
     Alike shared hosting, servers and code would be hosted under one owner.
@@ -232,7 +234,28 @@ Clients will often want to keep track of assets in real-time. This is an importa
 
 # Limitations
 
-todo
+- **Abiding by Time**
+
+	Developing high-quality features takes time. Ideally, this application should be ready to release ASAP in order to combat the market the best it possibly can, before more competitors arise and current competitors become aware of their weaknesses.
+
+    The application should be released in a fully functional state, and should be iteratively tested to ensure its feature-set is fully functional. However, this costs lots of time - lots of it. We're already trimming the amount of time required by using pre-built libraries to interact with our app.
+
+    Decreasing the time-to-market and overall lead time is a fundamental requirement to a healthy release with this app. We want to be able to combat the existing competitors, and dominate the open gap within the market.
+
+    Releasing a fully-functional app will secure a place within the industry 
+
+- **Financial Restriction**
+
+	This application doesn't cost much to produce, thanks in par with the usage of different libraries. This application is intended to be developed without a necessary investment. This means that specialised staff (like graphics designers) will not be hired, and additional staff/developers will, also, not be hired.
+
+    When deploying the solution, a centralised server will need to be used. As mentioned before, the application can be deployed on a VPS. DigitalOcean offers this product for as little as $5. And may also be free from services such as Heroku.
+
+- **Skillset Restrictions**
+
+    I currently hold a very vast skillset. I am proficient in knowhow for all of the technologies mentioned within this documentation. I currently hold professional experience working on many different technology stacks.
+
+    However, I *always* like a challenge. This will be mentioned more within the Design documentation.
+
 
 ---
 

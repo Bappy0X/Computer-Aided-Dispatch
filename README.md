@@ -29,6 +29,8 @@ I plan to use this as an "A-Level Computer Science Practical Programming Project
 	- [Limitations](docs/analysis.md#limitations)
 	- [Requirements](docs/analysis.md#requirements)
 	- [Success Criteria](docs/analysis.md#success-criteria)
+- [:two: Design](docs/design.md)
+	- [Chosen Tech Stack](docs/design.md#chosen-technology-stack)
 
 <a name="tech">
 
