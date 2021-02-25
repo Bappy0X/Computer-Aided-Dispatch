@@ -355,7 +355,54 @@ The only requirement for the end user will be to install a browser and use a dev
 
 # Success Criteria
 
-Todo
+In order to measure my success in the development and production of this application, a success criteria will be set. This will create an end-goal - a physical boundary of success.
+
+<table>
+	<thead>
+		<tr>
+			<th>Criteria</th>
+			<th>Description/Notes</th>
+			<th>Methodology of Measurement</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Create a usable UI and functional UX.</th>
+			<td>This must be measured both during the development process, and prior to release. Stakeholders must be able to enjoy the experience that they receive - and this will be measured with a user survey.</td>
+			<td>This will either be displayed on the site in a "please give feedback" fashion, or by a post-testing survey. In order to succeed, a minimum rating of 8/10 should be given. However, anything below 10 indicates a lack of success, so it should be worked on.</td>
+		</tr>
+		<tr>
+			<th>Require minimal training (relating to above)</th>
+			<td>In order to attract as many potential clients for this application as possible, the training process must either be minimal, or non-existant for this application. This will help to drive down costs and resources that could be better spent elsewhere - this includes time, which is very valuable for businesses.</td>
+			<td>Prior to the alpha-testing process, each user will explain how they found the User Experience.</td>
+		</tr>
+		<tr>
+			<th>Incorporate a Responsive UI that will function perfectly on all devices.</th>
+			<td>The application should be able to be used on any mobile device, including phones, tablets, laptops and more, whilst also remaining usable and powerful on desktop. This may be important to remember when picking and using libraries, as some can be resource intensive.</td>
+			<td>During development, and after final release, both virtual and physical devices can be utilised to test the application. To be successful, the application must scale well across all devices, and all features (regardless of any advanced capabilities) should be usable.</td>
+		</tr>
+		<tr>
+			<th>Boast a unique feature-set unlike any competitor.</th>
+			<td>To compete with cometitors within this market, this application must be able to utilise a unique toolbelt of tools and features. This will create a Unique Selling Point for this application, and will be important when creating keen and interested clients.</td>
+			<td>When the application is fully developed and prepped for initial release, the features-set should be compared to a selection of apps developed and released by/from competitors. This can be done in a table, and the effectiveness of these features can be measured in a user survey.</td>
+		</tr>
+		<tr>
+			<th>Be released free-of-cost.</th>
+			<td>To comply with the restriction of a zero-budget, this application should be developed and released free of charge. This means that nobody can be hired, or assist with the development process. This also assists with keeping the application 100% mine. (Prior to completion of the project, this will be released as source code under an open source license. The intention of this is to help others with the A-Level Computer Science Assessment, of year 2021, as well as assist those that may be developing a similar application)</td>
+			<td>Simply put, nothing should be spent on this project, and nobody should've actively contributed within the development process. Contributers will be allowed to contribute prior to completion and I'll actively allow and support this. After all, my code, and my solution, will not be perfect - there will always be room for potential improvement.</td>
+		</tr>
+		<tr>
+			<th>Fit the use-case of a wide range of stakeholders.</th>
+			<td>In order to compete with as many products as possible, and create a wide user/client-base, this product should be suitable for a wide range of clients, this includes both private and public services, globally, worldwide. It should also accomplish this without straying away from the inital objective - creating a CAD/Dispatch software.</td>
+			<td>Stakeholders should be invited equally, and should be mapped on a line graph. This graph will then display the amount of those those that support, enjoy or endorse the application.</td>
+		</tr>
+		<tr>
+			<th>Be deployed in a timely and easy manner.</th>
+			<td>The application must be able to be deployed by a client quickly.</td>
+			<td>This will require both a time measurement showing the beginning-to-end timedelta and personal measurement (1-10), representing the client's satisfaction with the deployment process.</td>
+		</tr>
+	</tbody>
+</table>
 
 ---
 
