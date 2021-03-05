@@ -2,6 +2,9 @@
 
 # :two: Design
 
+- [Infrastructure](#infrastructure)
+- [Database](#database)
+- [Top Down Diagram](#top-down-diagram)
 - [Chosen Tech Stack](#chosen-technology-stack)
 	- [Backend](#backend)
 	- [Databases](#databases)
@@ -9,6 +12,131 @@
 	- [Deployment](#deployment)
 	- [Devops](#devops)
 	- [Tools](#tools)
+
+# Infrastructure
+
+<p align="center"><img src="img/infrastructure_diagram.svg" height="400px" alt="Diagram showing infrastructure planned to be used."/></p>
+
+# Database
+
+To store data, we'll use MongoDB. A non-relational database that takes a similar approach to JSON. This will be far more useful than MySQL as we don't have to create middle-man tables that relate different records together.
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Calls</th>
+		</tr>
+		<tr>
+			<td colspan="2">Description</td>
+		</tr>
+		<tr>
+			<th>Key</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>ID</td>
+			<td>A unique identifier for referencing each call.</td>
+		</tr>
+		<tr>
+			<td>Name/Title</td>
+			<td>A broad and quick description.</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>This will be a description of the incident</td>
+		</tr>
+		<tr>
+			<td>Manager</td>
+			<td>This is the person that's claimed, created or managing the call.</td>
+		</tr>
+		<tr>
+			<td>Assigned</td>
+			<td>A list of ID's of users that are assigned to the call.</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>The status of the call. Will be one of: "Active", "New", "Inactive", "Unassigned", "Low Priority" or "Informational".</td>
+		</tr>
+		<tr>
+			<td>Updates</td>
+			<td>This will contain many update object ID's. The API will then later add</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Update</th>
+		</tr>
+		<tr>
+			<td colspan="2">Description</td>
+		</tr>
+		<tr>
+			<th>Key</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Placeholder</td>
+			<td>Placeholder</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Users</th>
+		</tr>
+		<tr>
+			<td colspan="2">Description</td>
+		</tr>
+		<tr>
+			<th>Key</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Placeholder</td>
+			<td>Placeholder</td>
+		</tr>
+	</tbody>
+</table>
+
+# Top-Down Diagram
+
+Under the surface, every app is a CRUD interface, allowing users to have a better experience with their data. A top-down diagram will allow
+
+<p align="center"><img src="img/design_flowchart.svg" height="400px" alt="Flowchart displaying the movement of data."/></p>
+
+### Client
+
+This will be the front-end application, this will show the UI & UX for the client to see and interact with. I plan to use React.js for this.
+
+- **User Login**
+
+This will be the front-end interface for logging into the users account in order to access the dashboard.
+
+- **Dashboard**
+
+This will be the main application. Users will have access (depending on their UserLevel) to different operations within the dashboard. Such as creating calls, updating calls, and more.
+
+### RESTful API
+
+To interact with our protected data, we'll need a RESTful API. I love creating API's with Python/Flask for its simplicity and effectiveness.
+
+- **User Auth**
+
+The User Auth portion of the API will be dedicated to logging in, checking authenticated users, and also logging them out. This allows us to keep the app secure, and prevent unwanted access.
+
+- **CRUD Interface**
+
+Short for Create, Read, Update, Delete, the CRUD interface will allow authenticated users to administrate different parts of their dashboard, editing, creating, reading and removing what they need.
 
 # Chosen Technology Stack
 
