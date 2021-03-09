@@ -15,7 +15,28 @@
 
 # Infrastructure
 
+We need somewhere to run our application, and it must be ran in a secure fashion, under a defined infrastructure. This will help to manage, deploy, and explain the inner workings of the application to our clients.
+
 <p align="center"><img src="img/infrastructure_diagram.svg" height="400px" alt="Diagram showing infrastructure planned to be used."/></p>
+
+- **Web Node**
+
+The application will run under 1 web node which will be split between two parallel running applications.
+
+	- **Front-End**
+
+	Utilising React.JS, the front end will provide the end-user with an interface and experience, allowing them to interact with the data that they manage.
+
+	- **Back-End API**
+
+	Running Python/Flask, the back-end will co-operate and function with the front-end to allow the end-user to manage their data.
+	This API must utilise the CRUD (Create, Read, Update, Delete) structure and operate RESTfully. It's also very important to be efficient and build responsively - so the end-user receives the best experience.
+	This may also be useful for developers that would like to build ontop of our application - so documentation will become useful.
+	Authentication through this API is necessary, as we must restrict the platform to those that are allowed to use it.
+
+	- **MongoDB**
+
+	We need a centralised database in order to store our data. MongoDB would be a great choice for this project due to our database structure. MySQL would also be a good fit, however, relationship tables would be needed & this costs time & stress.
 
 # Database
 
@@ -27,41 +48,41 @@ To store data, we'll use MongoDB. A non-relational database that takes a similar
 			<th colspan="2">Calls</th>
 		</tr>
 		<tr>
-			<td colspan="2">Description</td>
+			<td colspan="2">Definition of the calls, incidents or tasks for the client to assign or manage.</td>
 		</tr>
 		<tr>
-			<th>Key</th>
-			<th>Value</th>
+			<th align="right">Key</th>
+			<th align="left">Value</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>ID</td>
-			<td>A unique identifier for referencing each call.</td>
+			<td align="right">ID</td>
+			<td align="left">A unique identifier for referencing each call.</td>
 		</tr>
 		<tr>
-			<td>Name/Title</td>
-			<td>A broad and quick description.</td>
+			<td align="right">Name/Title</td>
+			<td align="left">A broad and quick description.</td>
 		</tr>
 		<tr>
-			<td>Description</td>
-			<td>This will be a description of the incident</td>
+			<td align="right">Description</td>
+			<td align="left">This will be a description of the incident</td>
 		</tr>
 		<tr>
-			<td>Manager</td>
-			<td>This is the person that's claimed, created or managing the call.</td>
+			<td align="right">Manager</td>
+			<td align="left">This is the person that's claimed, created or managing the call.</td>
 		</tr>
 		<tr>
-			<td>Assigned</td>
-			<td>A list of ID's of users that are assigned to the call.</td>
+			<td align="right">Assigned</td>
+			<td align="left">A list of ID's of users that are assigned to the call. The API will provide User objects within this list.</td>
 		</tr>
 		<tr>
-			<td>Status</td>
-			<td>The status of the call. Will be one of: "Active", "New", "Inactive", "Unassigned", "Low Priority" or "Informational".</td>
+			<td align="right">Status</td>
+			<td align="left">The status of the call. Will be one of: "Active", "New", "Inactive", "Unassigned", "Low Priority" or "Informational".</td>
 		</tr>
 		<tr>
-			<td>Updates</td>
-			<td>This will contain many update object ID's. The API will then later add</td>
+			<td align="right">Updates</td>
+			<td align="left">This will contain many update object ID's. The API will replace these with update objects.</td>
 		</tr>
 	</tbody>
 </table>
@@ -72,17 +93,33 @@ To store data, we'll use MongoDB. A non-relational database that takes a similar
 			<th colspan="2">Update</th>
 		</tr>
 		<tr>
-			<td colspan="2">Description</td>
+			<td colspan="2">A call will constantly be updated by users, we must create an update/audit log to see what's happened, and create a timeline for the end-user to see.</td>
 		</tr>
 		<tr>
-			<th>Key</th>
-			<th>Value</th>
+			<th align="right">Key</th>
+			<th align="left">Value</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>Placeholder</td>
-			<td>Placeholder</td>
+			<td align="right">ID</td>
+			<td align="left">A unique identifier for referencing each update.</td>
+		</tr>
+		<tr>
+			<th align="right">Title</th>
+			<th align="left">This is the title of the update - a very brief description.</th>
+		</tr>
+		<tr>
+			<th align="right">Description</th>
+			<th align="left">This a more developed description, </th>
+		</tr>
+		<tr>
+			<th align="right">User</th>
+			<th align="left">This will be the ID of the user that performed this update. The API will create a User object from this.</th>
+		</tr>
+		<tr>
+			<th align="right">Timestamp</th>
+			<th align="left">This is the timestamp set in ISO8601 format (CCYY-MM-DDThh:mm:ssTZD) that describes the time the update occured.</th>
 		</tr>
 	</tbody>
 </table>
@@ -93,17 +130,51 @@ To store data, we'll use MongoDB. A non-relational database that takes a similar
 			<th colspan="2">Users</th>
 		</tr>
 		<tr>
-			<td colspan="2">Description</td>
+			<td colspan="2">We need users! This is the user object that will hold the key information about users that we need.</td>
 		</tr>
 		<tr>
-			<th>Key</th>
-			<th>Value</th>
+			<th align="right">Key</th>
+			<th align="left">Value</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>Placeholder</td>
-			<td>Placeholder</td>
+			<td align="right">ID</td>
+			<td align="left">The unique identifier for each User object.</td>
+		</tr>
+		<tr>
+			<td align="right">Email</td>
+			<td align="left">The users email address used to deliver emails and log in.</td>
+		</tr>
+		<tr>
+			<td align="right">Password</td>
+			<td align="left">The user's password protected with SHA256.</td>
+		</tr>
+		<tr>
+			<td align="right">FullName</td>
+			<td align="left">The user's full name. Useful for sending emails, greetings, data administration and more.</td>
+		</tr>
+		<tr>
+			<td align="right">UserLevel</td>
+			<td align="left">
+				The permissions index for this user, as defined by:
+				<ol>
+					<li>Visitor</li>
+					<li>Employee/Unit</li>
+					<li>Assigner/Dispatcher</li>
+					<li>Administrator</li>
+					<li>Developer</li>
+					<li>Owner</li>
+				</ol>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">CurrentPos</td>
+			<td align="left">This is the current lat-lon of the user - security for this will be explained.</td>
+		</tr>
+		<tr>
+			<td align="right">LastUpdate</td>
+			<th align="left">This is the timestamp set in ISO8601 format (CCYY-MM-DDThh:mm:ssTZD) that defines the last time the user updated their location.</th>
 		</tr>
 	</tbody>
 </table>
