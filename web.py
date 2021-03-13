@@ -6,19 +6,16 @@ from public.db.models import db
 
 def createApp():
     app = Flask(__name__)
+    CORS(app)
 
     app.config["MONGODB_SETTINGS"] = {
         "db": "joshuavaughan_computer-aided-dispatch",
-        "host": "localhost",
-        "port": 27017
     }
     db.init_app(app)
 
     app.jinja_env.globals.update({
 
     })
-
-    CORS(app)
 
     from views.main import blueprint as mainBlueprint
     app.register_blueprint(mainBlueprint)
