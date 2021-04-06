@@ -12,13 +12,21 @@ class User(gj.Document):
     meta = {
         "collection": "Users"
     }
-    ...
+    email = db.EmailField()
+    password = db.StringField()
+    fullName = db.StringField()
+    userLevel = db.IntField()
+    currentPos = db.GeoPointField()
+    lastUpdate = db.DateTimeField()
 
 class Update(gj.Document):
     meta = {
         "collection": "Updates"
     }
-    ...
+    title = db.StringField()
+    description = db.StringField()
+    user = db.ReferenceField(User)
+    timestamp = db.DateTimeField()
 
 class Call(gj.Document):
     meta = {

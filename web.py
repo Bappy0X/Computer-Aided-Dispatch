@@ -1,21 +1,18 @@
 from flask import Flask, jsonify, request, render_template_string
 from flask_cors import CORS
 
+from dotenv import load_dotenv
+load_dotenv()
 from os import getenv
+
 from public.db.models import db
 
 def createApp():
     app = Flask(__name__)
     CORS(app)
 
-    app.config["MONGODB_SETTINGS"] = {
-        "db": "joshuavaughan_computer-aided-dispatch",
-    }
+    app.config["MONGODB_HOST"] = getenv("MONGODB_HOST")
     db.init_app(app)
-
-    app.jinja_env.globals.update({
-
-    })
 
     from views.main import blueprint as mainBlueprint
     app.register_blueprint(mainBlueprint)

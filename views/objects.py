@@ -3,9 +3,10 @@ from flask import Blueprint, request, jsonify, url_for
 from sys import path
 path.append("...")
 
-from public.db.models import Call, ValidationError
+from public.db.models import Call, Update, ValidationError
 
 from json import loads
+from datetime import datetime as dt
 
 blueprint = Blueprint("objects", __name__)
 
@@ -43,14 +44,32 @@ def calls():
         res = Call.objects().limit(perPage).skip(perPage*(page-1))
         return jsonify(
             success = True,
-            data = [loads(i.to_json()) for i in res],#follow_reference=True
+            data = [loads(i.to_json(follow_reference=True)) for i in res],#follow_reference=True
             lastPage = url_for("objects.calls", perPage=perPage, page=page-1),
             nextPage = url_for("objects.calls", perPage=perPage, page=page+1)
         )
     elif request.method == "POST":
-        obj = Call(name="testtt")
-        obj.save()
-        return jsonify(success=True, call=obj)
+        form = request.form
+        for i in ["name", "description"]:
+            if not form.get(i):
+                return jsonify(success=False, error=f"Missing form field `{i}`.")
+
+        thisCall = Call(
+            name=form["name"],
+            description=form["description"]
+        )
+
+        thisUpdate = Update(
+            title="Call Created",
+            description="This call was created.",
+            timestamp=dt.now()
+        )
+        thisUpdate.save()
+
+        thisCall.updates.append(thisUpdate)
+        thisCall.save()
+
+        return jsonify(success=True, call=loads(thisCall.to_json(follow_reference=True)))
 
 @blueprint.route("/calls/<string:id>")
 def getCall(id):
@@ -64,4 +83,4 @@ def getCall(id):
         thisCall = Call.objects.get(id=id)
     except ValidationError:
         return jsonify(success=False, error="Invalid ID!")
-    return jsonify(loads(thisCall.to_json()))#follow_reference=True
+    return jsonify(loads(thisCall.to_json(follow_reference=True)))
