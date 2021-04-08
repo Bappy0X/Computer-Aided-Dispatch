@@ -1,14 +1,13 @@
-from flask import Flask
+from flask import Flask, url_for
 
 #Our MongoEngine libraries
 from flask_mongoengine import MongoEngine
-import mongoengine_goodjson as gj
 from mongoengine.fields import ObjectIdField, ObjectId
 from mongoengine.errors import ValidationError
 
 db = MongoEngine()
 
-class User(gj.Document):
+class User(db.Document):
     meta = {
         "collection": "Users"
     }
@@ -19,7 +18,13 @@ class User(gj.Document):
     currentPos = db.GeoPointField()
     lastUpdate = db.DateTimeField()
 
-class Update(gj.Document):
+    def __iter__(self):
+        yield "id", str(self.id)
+        yield "email", self.email
+        yield "fullName", self.fullName
+        yield "userLevel", self.userLevel
+
+class Update(db.Document):
     meta = {
         "collection": "Updates"
     }
@@ -28,7 +33,14 @@ class Update(gj.Document):
     user = db.ReferenceField(User)
     timestamp = db.DateTimeField()
 
-class Call(gj.Document):
+    def __iter__(self):
+        yield "id", str(self.id)
+        yield "title", self.title
+        yield "description", self.description
+        yield "user", self.user
+        yield "timestamp", self.timestamp
+
+class Call(db.Document):
     meta = {
         "collection": "Calls"
     }
@@ -39,3 +51,13 @@ class Call(gj.Document):
     assigned = db.ListField(db.ReferenceField(User))
     status = db.StringField()
     updates = db.ListField(db.ReferenceField(Update))
+
+    def __iter__(self):
+        yield "id", str(self.id)
+        yield "name", self.name
+        yield "description", self.description
+        yield "manager", self.manager
+        yield "assigned", [dict(i) for i in self.assigned]
+        yield "status", self.status
+        yield "updates", [dict(i) for i in self.updates]
+        yield "url", url_for("calls.one", _id=self.id)

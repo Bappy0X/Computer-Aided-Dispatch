@@ -17,8 +17,8 @@ def createApp():
     from views.main import blueprint as mainBlueprint
     app.register_blueprint(mainBlueprint)
 
-    from views.objects import blueprint as objectsBlueprint
-    app.register_blueprint(objectsBlueprint)
+    from views.calls import blueprint as callsBlueprint
+    app.register_blueprint(callsBlueprint)
 
     #Error Handlers
     @app.errorhandler(404)
