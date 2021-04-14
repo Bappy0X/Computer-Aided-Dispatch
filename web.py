@@ -3,7 +3,8 @@ from flask_cors import CORS
 
 from dotenv import load_dotenv
 load_dotenv()
-from os import getenv
+from os import getenv, listdir
+from importlib import import_module
 
 from public.db.models import db
 
@@ -14,11 +15,9 @@ def createApp():
     app.config["MONGODB_HOST"] = getenv("MONGODB_HOST")
     db.init_app(app)
 
-    from views.main import blueprint as mainBlueprint
-    app.register_blueprint(mainBlueprint)
-
-    from views.calls import blueprint as callsBlueprint
-    app.register_blueprint(callsBlueprint)
+    for i in [i[:-3] for i in listdir("views") if i != "__pycache__"]:
+        thisModule = import_module(f"views.{i}")
+        app.register_blueprint(thisModule.blueprint)
 
     #Error Handlers
     @app.errorhandler(404)
