@@ -10,7 +10,7 @@ from datetime import datetime as dt
 
 blueprint = Blueprint("calls", __name__)
 
-@blueprint.route("/calls", methods=["GET", "POST"])
+@blueprint.route("/calls", methods=["GET"])
 def many(_id=None):
     """
         ## [GET] List our calls.
@@ -44,22 +44,6 @@ def many(_id=None):
         nextPage = url_for("calls.many", perPage=perPage, page=pagination.page+1) if pagination.page+1 <= pagination.pages else None
     )
 
-@blueprint.route("/calls/<string:_id>")
-def one(_id):
-    """
-        ## [GET] Fetch the data for a single call
-
-            - URL Vars:
-                - "_id": The id for the call to fetch.
-            - Example:
-                - `/calls/1234567890`
-    """
-    try:
-        thisCall = Call.objects.get(id=_id)
-    except ValidationError:
-        return jsonify(success=False, error="Invalid ID!")
-    return jsonify(dict(thisCall))
-
 @blueprint.route("/calls", methods=["POST"])
 def create():
     """
@@ -90,3 +74,19 @@ def create():
     thisCall.save()
 
     return jsonify(success=True, call=dict(thisCall))
+    
+@blueprint.route("/calls/<string:_id>")
+def one(_id):
+    """
+        ## [GET] Fetch the data for a single call
+
+            - URL Vars:
+                - "_id": The id for the call to fetch.
+            - Example:
+                - `/calls/1234567890`
+    """
+    try:
+        thisCall = Call.objects.get(id=_id)
+    except ValidationError:
+        return jsonify(success=False, error="Invalid ID!")
+    return jsonify(dict(thisCall))
