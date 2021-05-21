@@ -1,1 +1,1 @@
-web: gunicorn "web:createApp()"
+web: uvicorn "web:createApp()"

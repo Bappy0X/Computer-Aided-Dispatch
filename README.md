@@ -31,6 +31,9 @@ I plan to use this as an "A-Level Computer Science Practical Programming Project
 	- [Success Criteria](docs/analysis.md#success-criteria)
 - [:two: Design](docs/design.md)
 	- [Chosen Tech Stack](docs/design.md#chosen-technology-stack)
+- [:three: Development](docs/development.md)
+	- [The Client](docs/development.md#the-client)
+	- [The API](docs/development.md#the-api)
 
 <a name="tech">
 
