@@ -23,20 +23,20 @@ We need somewhere to run our application, and it must be ran in a secure fashion
 
 The application will run under 1 web node which will be split between two parallel running applications.
 
-	- **Front-End**
+- **Front-End**
 
-	Utilising React.JS, the front end will provide the end-user with an interface and experience, allowing them to interact with the data that they manage.
+Utilising React.JS, the front end will provide the end-user with an interface and experience, allowing them to interact with the data that they manage.
 
-	- **Back-End API**
+- **Back-End API**
 
-	Running Python/Flask, the back-end will co-operate and function with the front-end to allow the end-user to manage their data.
-	This API must utilise the CRUD (Create, Read, Update, Delete) structure and operate RESTfully. It's also very important to be efficient and build responsively - so the end-user receives the best experience.
-	This may also be useful for developers that would like to build ontop of our application - so documentation will become useful.
-	Authentication through this API is necessary, as we must restrict the platform to those that are allowed to use it.
+Running Python/FastAPI, the back-end will co-operate and function with the front-end to allow the end-user to manage their data.
+This API must utilise the CRUD (Create, Read, Update, Delete) structure and operate RESTfully. It's also very important to be efficient and build responsively - so the end-user receives the best experience.
+This may also be useful for developers that would like to build ontop of our application - so documentation will become useful.
+Authentication through this API is necessary, as we must restrict the platform to those that are allowed to use it.
 
-	- **MongoDB**
+- **MongoDB**
 
-	We need a centralised database in order to store our data. MongoDB would be a great choice for this project due to our database structure. MySQL would also be a good fit, however, relationship tables would be needed & this costs time & stress.
+We need a centralised database in order to store our data. MongoDB would be a great choice for this project due to our database structure. MySQL would also be a good fit, however, relationship tables would be needed & this costs time & stress.
 
 # Database
 
@@ -106,20 +106,20 @@ To store data, we'll use MongoDB. A non-relational database that takes a similar
 			<td align="left">A unique identifier for referencing each update.</td>
 		</tr>
 		<tr>
-			<th align="right">Title</th>
-			<th align="left">This is the title of the update - a very brief description.</th>
+			<td align="right">Title</td>
+			<td align="left">This is the title of the update - a very brief description.</td>
 		</tr>
 		<tr>
-			<th align="right">Description</th>
-			<th align="left">This a more developed description, </th>
+			<td align="right">Description</td>
+			<td align="left">This a more developed description, </td>
 		</tr>
 		<tr>
-			<th align="right">User</th>
-			<th align="left">This will be the ID of the user that performed this update. The API will create a User object from this.</th>
+			<td align="right">User</td>
+			<td align="left">This will be the ID of the user that performed this update. The API will create a User object from this.</td>
 		</tr>
 		<tr>
-			<th align="right">Timestamp</th>
-			<th align="left">This is the timestamp set in ISO8601 format (CCYY-MM-DDThh:mm:ssTZD) that describes the time the update occured.</th>
+			<td align="right">Timestamp</td>
+			<td align="left">This is the timestamp set in ISO8601 format (CCYY-MM-DDThh:mm:ssTZD) that describes the time the update occured.</td>
 		</tr>
 	</tbody>
 </table>
@@ -181,7 +181,7 @@ To store data, we'll use MongoDB. A non-relational database that takes a similar
 
 # Top-Down Diagram
 
-Under the surface, every app is a CRUD interface, allowing users to have a better experience with their data. A top-down diagram will allow
+Under the surface, every app is a CRUD interface, allowing users to have a better experience with their data. A top-down diagram will allow us to understand the structure of this app a little better.
 
 <p align="center"><img src="img/design_flowchart.svg" height="400px" alt="Flowchart displaying the movement of data."/></p>
 
@@ -199,7 +199,7 @@ This will be the main application. Users will have access (depending on their Us
 
 ### RESTful API
 
-To interact with our protected data, we'll need a RESTful API. I love creating API's with Python/Flask for its simplicity and effectiveness.
+To interact with our protected data, we'll need a RESTful API. Python/FastAPI will be used here, I applaud its speed and usability.
 
 - **User Auth**
 
@@ -217,26 +217,28 @@ Behind every good webapp is a complicated stack of software and hardware. The go
 
 ### Backend
 
-To build the backend API for this app, I'd like to use a Python environment. This is because I favour Flask's extensive usability and support in the modern world.
+To build the backend API for this app, I'd like to use a Python environment. Python is more than perfect for this application - it's expandability and ease of use will prove itself to be incredibly useful.
 
 **NGINX WSGI**
 
 To manage instances running on the same server, NGINX will be used. It's simple to use and implement. It just requires an installation and simple understanding of its syntax.
 
-This will be used to proxy and compile the Backend and Frontend into one domain. e.g:
+This will be used to proxy and compile the Backend and Frontend into one domain and subdomain. e.g:
 
-Backend/API: https://myapp.com/api/
+Backend/API: https://api.myapp.com
 
 Frontend/UIUX: https://myapp.com/
 
-**Py/Flask**
+**Py/FastAPI**
 
-I LOVE Flask. It's great for building responsive API's, and can use Pythons expandability in order to integrate with other services.
-In this instance, Flask will be used purely for API endpoints. It won't serve any html or web files. Ideally, it would have a documentation page to assist with development, and allow clients to utilise it. However, this may become time consuming. Worth checking out in future.
+I love the functionality of Flask, yet there are faster and more modern alternatives - queue FastAPI. This is a much better tool for building responsive API's. 
+In this instance, FastAPI will be used purely for API endpoints. It won't serve any html or web files. Ideally, it would have a documentation page to assist with development, and allow clients to utilise it. However, this may become time consuming. Worth checking out in future.
 
-**Flask-Socket.IO Server**
+**FastAPI-Socket.IO Server**
 
 To enable realtime communication and updates between the server and client, S.IO can be used. This will allow for different datasets to be updates in realtime, automatically, within scheduling and setting up requests to the API, which also may be pointless. All end-users can connect to one S.IO instance, further decreasing the load on the API.
+
+---
 
 ### Databases
 
@@ -253,6 +255,8 @@ Within our application, we'll have many pieces of data that will need to be rela
 **MongoDB - JSON-like syntax**
 
 This is a great database system, and can be used in the same way as MySQL - *however*, MongoDB is a closed source database, and isn't relational. This means that some rules that we may wish to implement with our application may cause errors with some components, and may make it more difficult to interface with some details.
+
+---
 
 ### Frontend
 
@@ -280,6 +284,8 @@ Simple to use and set up, jQuery is a great tool for indexing, referencing and m
 
 In order to interface with the backend S.IO, we must have a client side. This will allow us to have real-time communications between the server and the client, so that updates and much more will be instantaneous.
 
+---
+
 ### Deployment
 
 When we're ready, we'll want to host the application on a remote server. This will give the application proper resource allocation, faster and more reliable connection, and much more.
@@ -291,6 +297,8 @@ I'm a massive fan of DigitalOcean's VPS hosting. Their packages are extremely co
 **Ubuntu**
 
 This is my favourite Linux distribution. It's easy to implement, manage and understand. I intend to run a pure CLI interface, and won't need a desktop manager.
+
+---
 
 ### Devops
 
@@ -310,6 +318,8 @@ Integrated testing is a massive component of the DevOps chain. Deploying dysfunc
 
 Open Source is the best. Time to give back.
 This is a great tool for browsing source code, documenting features (just like this) and helping people out with examples. It also creates a centralised location for all the application's code.
+
+---
 
 ### Tools
 

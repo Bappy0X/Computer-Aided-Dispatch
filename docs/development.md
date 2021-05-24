@@ -5,7 +5,7 @@
 - [The Client](#the-client)
     - [Getting Started](#getting-started)
 - [The API](#the-api)
-    - [Structure](#structure)
+    - [Getting Started](#getting-started-2)
 
 # The Client
 
@@ -31,4 +31,22 @@ This will take a couple mins or so, and will create a very basic structure for o
 
 This will be the powerful engine beneath the hood. The API will be used to transfer data between the server and the client, all requests for data will be submitted via this API.
 
-The end goal for this API will be to be fast, and efficient.
+For the API, I'd like to set out 3 requirements:
+
+- **Versaility**
+
+Alike a Swiss Army Tool, the API should be multi-functional. It should be able to adapt and be used in a wide variety of situations.
+
+- **Speed**
+
+Throughout its functionality, the API should be stable under heavy loads where user traffic may peak. With the importance of delivery of date from this API, this is an extremely important factor - deliverability is a must.
+
+- **Existing Support and Documentation**
+
+In order to deploy with ease, and have the end-user understand the workflow, functionality and purpose of the API - existing documentation should already exist. This will help the end user to debug and understand any issues that may arise, and become easier to replicate and fix.
+
+I recently encountered FastAPI from DigitalOcean - my favourite server hosts, who covered the library in a tech talk, linked [here](https://www.youtube.com/watch?v=KVlqN0xNJxo). It fulfills every requirement on this list, and more. It's insanely fast, and incredibly versatile, outperforming Flask. It also supports Swagger for fast and easy documentation, and has great existing documentation and a great community.
+
+---
+
+## Getting Started
